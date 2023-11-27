@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 
 import { useEffect, useState } from "react";
-import './ProductList.css'
+import "./ProductList.css";
 import SingaleProduct from "../SingaleProduct/SingaleProduct";
 import { getLocalStorage } from "../../utilis";
 
@@ -43,19 +43,19 @@ const ProductList = () => {
   };
   //handelDeleteProduct
   const handelDeleteProduct = (productId) => {
-    setProducts(products.filter((p) => p.productId!== productId));
+    setProducts(products.filter((p) => p.productId !== productId));
   };
-// set localstorage
-useEffect(() => {
+  // set localstorage
+  useEffect(() => {
     localStorage.setItem("products", JSON.stringify(products));
     setProducts(products);
   }, [products]);
 
-  
   return (
     <div className="wrapper">
       <form onSubmit={handelSubmit}>
-        <input required
+        <input
+          required
           onChange={(e) => {
             setName(e.target.value);
           }}
@@ -64,34 +64,38 @@ useEffect(() => {
           placeholder="Name"
           type="text"
         />
-        <input required
+        <input
+          required
           onChange={(e) => {
             setProductId(e.target.value);
           }}
           value={productId}
           name="productId"
           placeholder="Product id"
-          type="text"
+          type="number"
         />
-        <input required
+        <input
+          required
           onChange={(e) => {
             setProductPrice(e.target.value);
           }}
           value={productPrice}
           name="productPrice"
           placeholder="Product Price"
-          type="text"
+          type="number"
         />
-        <input required
+        <input
+          required
           onChange={(e) => {
             setProductQuantity(e.target.value);
           }}
           value={productQuantity}
           name="productQuantity"
           placeholder="product Quantity"
-          type="text"
+          type="number"
         />
-        <textarea required
+        <textarea
+          required
           onChange={(e) => {
             setProductDescription(e.target.value);
           }}
@@ -101,18 +105,23 @@ useEffect(() => {
           type="text"
         />
         <label>
-            Choos your color
-            <input required
-              onChange={(e) => {
-                setColor(e.target.value);
-              }}
-              value={color}
-              name="color"
-              type="color"
-            />
-  
+          Choos your color
+          <input
+            required
+            onChange={(e) => {
+              setColor(e.target.value);
+            }}
+            value={color}
+            name="color"
+            type="color"
+          />
         </label>
-        <button type="submit">Submit</button>
+        <button
+          className="submit-button"
+          type="submit"
+        >
+          Submit
+        </button>
       </form>
 
       <div className="">
@@ -131,13 +140,15 @@ useEffect(() => {
                     <th>Delete</th>
                   </tr>
                 </thead>
-                {
-                    products.map((product) =>{
-                        return(
-                            <SingaleProduct handelDeleteProduct={handelDeleteProduct} product={product} key={product.productId}/>
-                        )
-                    })
-                }
+                {products.map((product) => {
+                  return (
+                    <SingaleProduct
+                      handelDeleteProduct={handelDeleteProduct}
+                      product={product}
+                      key={product.productId}
+                    />
+                  );
+                })}
               </table>
             </div>
           </>

@@ -1,56 +1,68 @@
-.wrapper{
-    & input{
+.wrapper {
+  & input {
     margin-bottom: 20px;
     border-color: aqua;
     outline: none;
     border-radius: 5px;
     padding: 5px;
     background-color: #192a56;
-    display:block;
-    }
-    & button{
-     padding: 5px 20px;
-     text-align: center;
-     border-radius: 5px;
-     background-color: #273c75;
-     border-color: aliceblue;
-     color: white;
-     border: 2px solid aqua;
-     width: 100px !important;
-     display: block;
-     
-    }
-    & label{
-        font-size: 15px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: white;
-    }
-    & textarea{
-        margin-bottom: 20px;
-        border-color: aqua;
-        outline: none;
-        border-radius: 5px;
-        padding: 5px;
-        background-color: #192a56;
-        display:block;
-    }
-    & form{
-        width: 306px;
-        background-color: #192a56;
-        margin: 20px auto;
-        padding: 20px;   
-        border-radius: 10px;
-
-      }
-
-}
-
-.view-container{
-    border-radius: 20px;
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 20px !important;
+  }
+  & button {
+    padding: 5px 20px;
+    text-align: center;
+    border-radius: 5px;
     background-color: #273c75;
+    border-color: aliceblue;
+    color: white;
+    border: 2px solid aqua;
+    width: 100px !important;
+  }
+  & label {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+    display: block;
+    margin: 0 auto;
+  }
+  & textarea {
+    margin-bottom: 20px;
+    border-color: aqua;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #192a56;
+   width: 40%;
+    display: block;
+    margin: 0 auto;
+  
+  
+  }
+  & .submit-button{
+    display: block;
+    margin: 0 auto;
+  }
+  & form {
+    /* width: 306px; */
+    background-color: #192a56;
     margin: 20px auto;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+}
+
+.view-container {
+  border-radius: 20px;
+  background-color: #273c75;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }

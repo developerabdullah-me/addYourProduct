@@ -5,7 +5,7 @@
 const SingaleProduct = ({ product, handelDeleteProduct }) => {
   return (
     <tbody>
-      <tr className="table-primary">
+      <tr  className="table-primary">
         <td>{product.name}</td>
         <td>{product.productId}</td>
         <td>{product.productPrice}</td>
